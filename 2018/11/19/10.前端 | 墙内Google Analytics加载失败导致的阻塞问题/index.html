@@ -50,7 +50,7 @@
     
     <title>
         
-            timeline | 
+            前端 | 墙内Google Analytics加载失败导致的阻塞问题 | 
         
         Ricardo (Tongtong) Liu&#39;s Blog
     </title>
@@ -60,8 +60,8 @@
     <link rel="icon" href="/Blog/img/myfavicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="Write the code. Change the world. 这是曾经的理想，现在在斜杠青年的路上一往无前。">
-    <meta name="keywords" content="编程, 摄影, 一切有趣的事情, Coding, Photography, Anything Interesting">
+    <meta name="description" itemprop="description" content="给网站配置了Google Analytics脚本后，在国内访问网站时，由于Google Analytics无法加载（一直处于pending状态），导致网页的整体渲染阻塞。本文提供了另一种异步加载Google Analytics脚本的方式来解决该问题。">
+    <meta name="keywords" content="编程, 摄影, 一切有趣的事情, Coding, Photography, Anything Interesting,前端,JavaScript,浏览器,Google">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -88,6 +88,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/Blog/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/Blog/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/Blog/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -224,7 +227,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Ricardo (Tongtong) Liu&#39;s Blog">
-    <meta name="msapplication-starturl" content="http://tongtongliu.siyuan12.com/Blog/Blog/timeline/">
+    <meta name="msapplication-starturl" content="http://tongtongliu.siyuan12.com/Blog/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Ricardo (Tongtong) Liu&#39;s Blog">
@@ -243,13 +246,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://tongtongliu.siyuan12.com/Blog/Blog/timeline/">
+    <meta property="og:url" content="http://tongtongliu.siyuan12.com/Blog/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="timeline | Ricardo (Tongtong) Liu&#39;s Blog">
+    <meta property="og:title" content="前端 | 墙内Google Analytics加载失败导致的阻塞问题 | Ricardo (Tongtong) Liu&#39;s Blog">
     <meta property="og:image" content="/Blog/img/myfavicon.png">
-    <meta property="og:description" content="Write the code. Change the world. 这是曾经的理想，现在在斜杠青年的路上一往无前。">
-    
+    <meta property="og:description" content="给网站配置了Google Analytics脚本后，在国内访问网站时，由于Google Analytics无法加载（一直处于pending状态），导致网页的整体渲染阻塞。本文提供了另一种异步加载Google Analytics脚本的方式来解决该问题。">
+    <meta property="og:article:tag" content="前端"> <meta property="og:article:tag" content="JavaScript"> <meta property="og:article:tag" content="浏览器"> <meta property="og:article:tag" content="Google"> 
 
+    
+        <meta property="article:published_time" content="Mon Nov 19 2018 19:58:44 GMT+0800">
+        <meta property="article:modified_time" content="Mon Nov 19 2018 21:11:43 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -257,13 +263,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://tongtongliu.siyuan12.com/Blog/Blog/timeline/index.html" />
+        <link rel="canonical" href="http://tongtongliu.siyuan12.com/Blog/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://tongtongliu.siyuan12.com/Blog/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/index.html",
+    "headline": "前端 | 墙内Google Analytics加载失败导致的阻塞问题",
+    "datePublished": "Mon Nov 19 2018 19:58:44 GMT+0800",
+    "dateModified": "Mon Nov 19 2018 21:11:43 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Ricardo Liu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/myavatar.png"
+        },
+        "description": "<span style='line-height: 1.3em;'>Write the code. Change the world.</span>,<span style='line-height: 1.3em;'>这是曾经的理想</span>,<span style='line-height: 1.3em;'>现在在斜杠青年的路上一往无前</span>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Ricardo (Tongtong) Liu&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/myfavicon.png"
+        }
+    },
+    "keywords": ",前端,JavaScript,浏览器,Google编程, 摄影, 一切有趣的事情, Coding, Photography, Anything Interesting",
+    "description": "给网站配置了Google Analytics脚本后，在国内访问网站时，由于Google Analytics无法加载（一直处于pending状态），导致网页的整体渲染阻塞。本文提供了另一种异步加载Google Analytics脚本的方式来解决该问题。",
+}
+</script>
 
 
     
@@ -321,654 +357,384 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#01-问题描述和原因分析"><span class="post-toc-number">1.</span> <span class="post-toc-text">01. 问题描述和原因分析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#02-解决办法"><span class="post-toc-number">2.</span> <span class="post-toc-text">02. 解决办法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#03-参考资料"><span class="post-toc-number">3.</span> <span class="post-toc-text">03. 参考资料</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Single Timeline Page -->
-    <style>
-	.md-container {
-		width: 90%;
-		max-width: 1170px;
-		margin: 0 auto;
-	}
-	.md-container::after {
-		content: '';
-		display: table;
-		clear: both;
-	}
-	#md-timeline {
-		position: relative;
-		padding: 2em 0;
-		margin-top: 2em;
-		margin-bottom: 2em;
-	}
-	@media screen and (max-device-width:480px){
-		#md-timeline {
-			margin-top: 6em;
-		}
-	}
-	#md-timeline::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 18px;
-		height: 100%;
-		width: 2px;
-		background: #d7e4ed;
-	}
-	.md-timeline-title {
-		font-size: 20px;
-		line-height: 24px;
-	}
-	.md-timeline-content a {
-		text-decoration: none;
-	}
-	.md-timeline-info {
-		height: 20px;
-		width: 100%;
-		margin: 10px 0px;
-	}
-	.md-timeline-info-span {
-		float: right;
-		margin-right: 10px;
-		text-align: right;
-	}
-	.md-timeline-excerpt {
-	    	clear: right; 
-	}
-	@media only screen and (min-width: 1170px) {
-		#md-timeline {
-			margin-top: 3em;
-			margin-bottom: 3em;
-		}
-		#md-timeline::before {
-			left: 50%;
-			margin-left: -2px;
-		}
-	}
-	.md-timeline-block {
-		position: relative;
-		margin: 2em 0;
-	}
-	.md-timeline-block:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-	.md-timeline-block:first-child {
-		margin-top: 0;
-	}
-	.md-timeline-block:last-child {
-		margin-bottom: 0;
-	}
-	@media only screen and (min-width: 1170px) {
-		.md-timeline-block {
-			margin: 4em 0;
-		}
-		.md-timeline-block:first-child {
-			margin-top: 0;
-		}
-		.md-timeline-block:last-child {
-			margin-bottom: 0;
-		}
-	}
-	.md-timeline-date {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 60px;
-		height: 40px;
-		border-radius: box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-	}
-	.md-timeline-date.blue {
-		background: #0D395F;
-		-webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-	}
-	@media only screen and (min-width: 1170px) {
-		.md-timeline-date {
-			width: 60px;
-			height: 60px;
-			left: 50%;
-			margin-left: -30px;
-			/* Force Hardware Acceleration in WebKit */
-			-webkit-transform: translateZ(0);
-			-webkit-backface-visibility: hidden;
-		}
-		.cssanimations .md-timeline-date.is-hidden {
-			visibility: hidden;
-		}
-		.cssanimations .md-timeline-date.bounce-in {
-			visibility: visible;
-			-webkit-animation: md-bounce-1 0.6s;
-			-moz-animation: md-bounce-1 0.6s;
-			animation: md-bounce-1 0.6s;
-		}
-	}
-	@-webkit-keyframes md-bounce-1 {
-		0% {
-			opacity: 0;
-			-webkit-transform: scale(0.5);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: scale(1.2);
-		}
-		100% {
-			-webkit-transform: scale(1);
-		}
-	}
-	@-moz-keyframes md-bounce-1 {
-		0% {
-			opacity: 0;
-			-moz-transform: scale(0.5);
-		}
-		60% {
-			opacity: 1;
-			-moz-transform: scale(1.2);
-		}
-		100% {
-			-moz-transform: scale(1);
-		}
-	}
-	@keyframes md-bounce-1 {
-		0% {
-			opacity: 0;
-			-webkit-transform: scale(0.5);
-			-moz-transform: scale(0.5);
-			-ms-transform: scale(0.5);
-			-o-transform: scale(0.5);
-			transform: scale(0.5);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: scale(1.2);
-			-moz-transform: scale(1.2);
-			-ms-transform: scale(1.2);
-			-o-transform: scale(1.2);
-			transform: scale(1.2);
-		}
-		100% {
-			-webkit-transform: scale(1);
-			-moz-transform: scale(1);
-			-ms-transform: scale(1);
-			-o-transform: scale(1);
-			transform: scale(1);
-		}
-	}
-	.md-timeline-content {
-		position: relative;
-		margin-left: 60px;
-		background: white;
-		padding: 1em;
-		-webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-	}
-	.md-timeline-content:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-	.md-timeline-content h2 {
-		color: #303e49;
-	}
-	.md-timeline-content p, .md-timeline-content .md-read-more, .md-timeline-content .md-date {
-		font-size: 13px;
-		font-size: 0.8125rem;
-	}
-	.md-timeline-content .md-read-more, .md-timeline-content .md-date {
-		display: inline-block;
-	}
-	.md-timeline-content p {
-		margin: 1em 0;
-		line-height: 1.6;
-	}
-	.md-timeline-content .md-read-more {
-		float: right;
-		padding: .8em 1em;
-		background: #acb7c0;
-		color: white;
-		border-radius: 0.25em;
-	}
-	.md-date {
-		color: white;
-		text-align: center;
-	}
-	.no-touch .md-timeline-content .md-read-more:hover {
-		background-color: #bac4cb;
-	}
-	.md-timeline-content::before {
-		content: '';
-		position: absolute;
-		top: 16px;
-		right: 100%;
-		height: 0;
-		width: 0;
-		border: 7px solid transparent;
-		border-right: 7px solid white;
-	}
-	@media only screen and (min-width: 768px) {
-		.md-timeline-content h2 {
-			font-size: 20px;
-			font-size: 1.25rem;
-		}
-		.md-timeline-content p {
-			font-size: 16px;
-			font-size: 1rem;
-		}
-		.md-timeline-content .md-read-more {
-			font-size: 14px;
-			font-size: 0.875rem;
-		}
-	}
-	@media only screen and (min-width: 1170px) {
-		.md-date {
-			text-align: center;
-			margin-top: 10px;
-			line-height: 20px;
-		}
-		.md-timeline-content {
-			margin-left: 0;
-			padding: 1.6em;
-			width: 45%;
-		}
-		.md-timeline-content::before {
-			top: 24px;
-			left: 100%;
-			border-color: transparent;
-			border-left-color: white;
-		}
-		.md-timeline-content .md-read-more {
-			float: left;
-		}
-		.md-timeline-block:nth-child(even) .md-timeline-content {
-			float: right;
-		}
-		.md-timeline-block:nth-child(even) .md-timeline-content::before {
-			top: 24px;
-			left: auto;
-			right: 100%;
-			border-color: transparent;
-			border-right-color: white;
-		}
-		.md-timeline-block:nth-child(even) .md-timeline-content .md-read-more {
-			float: right;
-		}
-		.cssanimations .md-timeline-content.is-hidden {
-			visibility: hidden;
-		}
-		.cssanimations .md-timeline-content.bounce-in {
-			visibility: visible;
-			-webkit-animation: md-bounce-2 0.6s;
-			-moz-animation: md-bounce-2 0.6s;
-			animation: md-bounce-2 0.6s;
-		}
-	}
-	@media only screen and (min-width: 1170px) {
-		/* inverse bounce effect on even content blocks */
-		.cssanimations .md-timeline-block:nth-child(even) .md-timeline-content.bounce-in {
-			-webkit-animation: md-bounce-2-inverse 0.6s;
-			-moz-animation: md-bounce-2-inverse 0.6s;
-			animation: md-bounce-2-inverse 0.6s;
-		}
-	}
-	@-webkit-keyframes md-bounce-2 {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(-100px);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: translateX(20px);
-		}
-		100% {
-			-webkit-transform: translateX(0);
-		}
-	}
-	@-moz-keyframes md-bounce-2 {
-		0% {
-			opacity: 0;
-			-moz-transform: translateX(-100px);
-		}
-		60% {
-			opacity: 1;
-			-moz-transform: translateX(20px);
-		}
-		100% {
-			-moz-transform: translateX(0);
-		}
-	}
-	@keyframes md-bounce-2 {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(-100px);
-			-moz-transform: translateX(-100px);
-			-ms-transform: translateX(-100px);
-			-o-transform: translateX(-100px);
-			transform: translateX(-100px);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: translateX(20px);
-			-moz-transform: translateX(20px);
-			-ms-transform: translateX(20px);
-			-o-transform: translateX(20px);
-			transform: translateX(20px);
-		}
-		100% {
-			-webkit-transform: translateX(0);
-			-moz-transform: translateX(0);
-			-ms-transform: translateX(0);
-			-o-transform: translateX(0);
-			transform: translateX(0);
-		}
-	}
-	@-webkit-keyframes md-bounce-2-inverse {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(100px);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: translateX(-20px);
-		}
-		100% {
-			-webkit-transform: translateX(0);
-		}
-	}
-	@-moz-keyframes md-bounce-2-inverse {
-		0% {
-			opacity: 0;
-			-moz-transform: translateX(100px);
-		}
-		60% {
-			opacity: 1;
-			-moz-transform: translateX(-20px);
-		}
-		100% {
-			-moz-transform: translateX(0);
-		}
-	}
-	@keyframes md-bounce-2-inverse {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(100px);
-			-moz-transform: translateX(100px);
-			-ms-transform: translateX(100px);
-			-o-transform: translateX(100px);
-			transform: translateX(100px);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: translateX(-20px);
-			-moz-transform: translateX(-20px);
-			-ms-transform: translateX(-20px);
-			-o-transform: translateX(-20px);
-			transform: translateX(-20px);
-		}
-		100% {
-			-webkit-transform: translateX(0);
-			-moz-transform: translateX(0);
-			-ms-transform: translateX(0);
-			-o-transform: translateX(0);
-			transform: translateX(0);
-		}
-	}
-</style>
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-<section id="md-timeline" class="md-container">
-   	   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">11月 19 2018</div>
-                		</div>
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/">前端 | 墙内Google Analytics加载失败导致的阻塞问题</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/Blog/categories/前端/">前端</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/Blog/tags/Google/">Google</a>, <a class="tag-link" href="/Blog/tags/JavaScript/">JavaScript</a>, <a class="tag-link" href="/Blog/tags/前端/">前端</a>, <a class="tag-link" href="/Blog/tags/浏览器/">浏览器</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-摘要：给网站配置了Google Analytics脚本后，在国内访问网站时，由于Google Analytics无法加载（一直处于pending状态），导致网页的整体渲染阻塞。本文提供了另一种异步加载Google Analytics脚本的方式来解决该问题。
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">10月 24 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/Blog/2018/10/24/08.密码学 | Many-Time-Pad攻击/">密码学 | Many-Time-Pad攻击</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/Blog/categories/密码学/">密码学</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/Blog/tags/Vernam/">Vernam</a>, <a class="tag-link" href="/Blog/tags/密码学/">密码学</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-摘要：从理论上可知，Vernam密码的一次一密(One-Time-Pad)方案是不可破解的。但是，如果同一段密钥被用来加密多段密文，即多次一密(Many-Time-Pad)的情况下，加密方案就不再安全。本文以一次密码学课的作业为例，介绍Many-Time-Pad Attack的具体过程。
-
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">3月 12 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/Blog/2018/03/12/09.Python | 更新Python后如何更新virtualenv/">Python | 更新Python后如何修复virtualenv</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/Blog/categories/Python/">Python</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/Blog/tags/Python/">Python</a>, <a class="tag-link" href="/Blog/tags/virtualenv/">virtualenv</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-摘要：在升级了Python后，由于Python路径变更，virtualenv中的symlinks将被破坏，本文提供了脚本来修复这个问题。
-
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">1月 24 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/Blog/2018/01/24/06.撒币游戏 | 一次有趣的博弈论实践/">撒币游戏 | 一次有趣的博弈论实践</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/Blog/categories/经济学/">经济学</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/Blog/tags/博弈论/">博弈论</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-摘要：最近，借着生日的契机，在公众号里进行了一次「撒币」游戏。让我们回顾一下这次游戏里有哪些有趣的事情吧。
-
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">1月 15 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/Blog/2018/01/15/07.Azure | 批量获取Azure-Blob列表/">Azure | 批量获取Azure Blob列表</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/Blog/categories/Azure/">Azure</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/Blog/tags/Azure/">Azure</a>, <a class="tag-link" href="/Blog/tags/Python/">Python</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-摘要：介绍如何利用Azure Python SDK批量提取Blob的列表。
-
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">3月 31 2015</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/Blog/2015/03/31/05.Mac | Mac不常见问题及解决方案/">Mac | Mac不常见问题及解决方案</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/Blog/categories/Mac/">Mac</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/Blog/tags/Mac/">Mac</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-摘要：记录了使用Mac三年以来，各种搜索得到&amp;搜索不到的问题&amp;解决方案。
-
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">3月 09 2015</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/Blog/2015/03/09/04.密码学 | Enigma破解分析/">密码学 | Enigma破解分析</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/Blog/categories/密码学/">密码学</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/Blog/tags/Enigma/">Enigma</a>, <a class="tag-link" href="/Blog/tags/密码学/">密码学</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-摘要：详细分析了对雷杰夫斯基和图灵破解Enigma的工作。
-
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">2月 18 2015</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/Blog/2015/02/18/03.Mac | Mac小工具集锦v1-0/">Mac | Mac小工具集锦v1.0</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/Blog/categories/Mac/">Mac</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/Blog/tags/Mac/">Mac</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-摘要：有刚入手Mac的朋友问有哪些工具推荐，于是整理一篇实用小工具的简介，与大家分享一下。
-
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">12月 22 2014</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/Blog/2014/12/22/02.Haskell | Monad初探/">Haskell | Monad初探</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/Blog/categories/Haskell/">Haskell</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/Blog/tags/Haskell/">Haskell</a>, <a class="tag-link" href="/Blog/tags/Monad/">Monad</a>, <a class="tag-link" href="/Blog/tags/范畴论/">范畴论</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-摘要：学习Haskell的过程中一时无法理解Monad的概念，于是探索了一番，将心得记录如下。
-
-						...
-					</p>
-                    		</div>
-			</div>	
-   			   	  		
-   	</section>
-
-<script type="text/ls-javascript" id="page-timeline-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
-    $(document).ready(function() {
-        adjustFooter();
-    });
+    $('.post_thumbnail-random').attr('data-original', '/Blog/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                前端 | 墙内Google Analytics加载失败导致的阻塞问题
+            </p>
+        </div>
 
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/Blog/img/myavatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Ricardo Liu</strong>
+        <span>11月 19, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAAE+CAAAAAAxUyPsAAAE5UlEQVR42u3aUW7bMBAE0Nz/0ukBAkszu5Tjto9fgWKY4mOALGf59W0sxhcCfPjw4TPw4cOHz8CH7y/h+4rHq8+/nObHb39+z/Unk3mvn1+/Vbt2fPjw4cOH7xTfzb/qy2UnTNefaZ9Ei4z/FPK148OHDx8+fGf5kmnyn5NyJC9KXi0sL56SdSXE+PDhw4cP3zv5kiN9e0Rvg4Z8e5JV4MOHDx8+fJ/MN3v1TVCeh/6nyhp8+PDhw4fvPXx5YN1GAO1mzMqUfCN/rdeBDx8+fPjwjS6o/Us//8L9Pnz48OHD9x/zzcapSD0pXJKCadZgGK4dHz58+PDhW/Dly8uvkV0/mY08LMi5h9uPDx8+fPjwLfjy8HrTzE7KoM31tbObd7MZ+PDhw4cP35rv1GR5U3x2pG+/ub3KlrTw8eHDhw8fvg1fcnhulzdbTL7UNjiYNQ/w4cOHDx++J/jyCfLP75vceZSQP89LomHdhw8fPnz48C0ig7aJvnnp/YE/aYfnzfKbPwt8+PDhw4dvzbcpNZLD/6kSZBb6z9r5ReGCDx8+fPjwlX3eWdM6bzbnpUPy/fvn7eU2fPjw4cOH72m+TYHyHY/80N5uzCySqCMDfPjw4cOHb823IYgueMUzJm/SRvyz2AIfPnz48OE7xddG6nlzPQ/iZ2VNGxDk73az/fjw4cOHD9+Cb3No39BsiqS6sb2+soYPHz58+PA9wXeqZX4qUMiLjCR6yGOFmxXhw4cPHz58a748sM4b55vCqG3b74OAvJzChw8fPnz4Nnyz6fP2dl6a5CPZqrYwylv1+PDhw4cP3ym+5J/3rPndvmIeshft7UXLHx8+fPjw4TvLdzbazmOFZK687Z0XNG2BhQ8fPnz48D3BNztC52XB7LjeNr83c0Xz4sOHDx8+fIf42qXmTetNBDArR07Ntar78OHDhw8fvhcX1GaXz65faNYmz0uT6Hi/CDuiC2r48OHDhw9fyZdEBvui4WwBlG92e7Uu+mZ8+PDhw4dvwdcGBKda3Xkhsgkm8sigaEvgw4cPHz58j/Hlh+1kAXkxNCtN8nc7HNbjw4cPHz58ZZu8jeYTuLaUKRYQNwPaN48CfXz48OHDh+9hvg3E5tA+a6u3DfW2XMOHDx8+fPhO8bUQ+2b2qdZ7+zxv5BeRAT58+PDhwzfi21/napvoLXobGSQbc6xwwYcPHz58+AK+ffN7c7CffX9L0BZY+PDhw4cP3xN8pwLutjhoy4s84EhChPzPJbrfhw8fPnz48MV8yYJnZUpSKMzKoE1kkDcDhhfU8OHDhw8fvtEFtfwgXYfdwfNZw2BfKq3a5Pjw4cOHD1/Jtyk18jb2WazZ4T8va4a3DPDhw4cPH77LsH4Gl8cN+fLaACLfqlkkgQ8fPnz48J3la0feim7j9TawSEA34Qg+fPjw4cP3BN+mLX32KlgSJcw2IA8O6rAeHz58+PDhG/G1y2vhThUTs2LlejPahgE+fPjw4cN3im9TrLQcsxh9c+w/Ngs+fPjw4cP3dr7kFdtmdtuez0OHHBofPnz48OH7NL6kgZ0f12dN97yEmkUhN2vHhw8fPnz4DvG1YXoO0Ybvm7h/E+4/3ibHhw8fPnz4RhH2vqTIy502Mni6AY8PHz58+PBt+Ix24MOHDx8+Ax8+fPgMfPg+ePwBz8egLlH+8EMAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/Blog/tags/Google/">Google</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/Blog/tags/JavaScript/">JavaScript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/Blog/tags/前端/">前端</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/Blog/tags/浏览器/">浏览器</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=前端 | 墙内Google Analytics加载失败导致的阻塞问题&url=http://tongtongliu.siyuan12.com/Blog/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/index.html&pic=http://tongtongliu.siyuan12.com/Blog/img/myfavicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://tongtongliu.siyuan12.com/Blog/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://tongtongliu.siyuan12.com/Blog/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://tongtongliu.siyuan12.com/Blog/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/index.html&title=前端 | 墙内Google Analytics加载失败导致的阻塞问题" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p><strong>摘要</strong>：给网站配置了Google Analytics脚本后，在国内访问网站时，由于Google Analytics无法加载（一直处于pending状态），导致网页的整体渲染阻塞。本文提供了另一种异步加载Google Analytics脚本的方式来解决该问题。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="01-问题描述和原因分析"><a href="#01-问题描述和原因分析" class="headerlink" title="01. 问题描述和原因分析"></a>01. 问题描述和原因分析</h2><p>为了统计网站的访客情况，我是用了Google Analytics（下面简称GA）的服务。根据GA的文档，推荐插入跟踪代码的方式是使用全局网站代码，具体来说，是将下述代码插入要跟踪的每个网页的<code>&lt;HEAD&gt;</code>标记中（<code>UA-XXXXX-Y</code>需替换为要GA的媒体资源ID）：</p>
+<pre><code class="javascript">&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag(&#39;js&#39;, new Date());
+
+    gtag(&#39;config&#39;, &#39;UA-XXXXX-Y&#39;);
+&lt;/script&gt;
+</code></pre>
+<p>插入上述代码后，网页渲染时执行的流程如下：</p>
+<ol>
+<li>下载<code>https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y</code>脚本（下面简称<code>gtag.js</code>），此过程不阻塞HTML的解析</li>
+<li>下载完成后，立即执行<code>gtag.js</code>，<code>gtag.js</code>会在<code>&lt;HEAD&gt;</code>标签中插入异步执行的script标签<code>&lt;script type=&quot;text/javascript&quot; async src=&quot;https://www.google-analytics.com/analytics.js&quot;&gt;&lt;/script&gt;</code></li>
+<li>下载<code>https://www.google-analytics.com/analytics.js</code>脚本（下面简称<code>analytics.js</code>），此过程不会阻塞HTML的解析</li>
+<li>下载完成后，立即执行<code>analytics.js</code>，<code>analytics.js</code>会向<code>https://www.google-analytics.com</code>发送采集结果</li>
+</ol>
+<p>上述过程需要从两个域名（<code>www.googletagmanager.com</code>与<code>www.google-analytics.com</code>）处下载脚本，而在国内，是无法访问上述两个域名的，<code>ping</code>的结果如下。</p>
+<pre><code class="bash">PING www-googletagmanager.l.google.com (6.6.6.6): 56 data bytes
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+Request timeout for icmp_seq 3
+Request timeout for icmp_seq 4
+^C
+--- www-googletagmanager.l.google.com ping statistics ---
+6 packets transmitted, 0 packets received, 100.0% packet loss
+
+PING www-google-analytics.l.google.com (6.6.6.6): 56 data bytes
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+Request timeout for icmp_seq 3
+Request timeout for icmp_seq 4
+^C
+--- www-google-analytics.l.google.com ping statistics ---
+6 packets transmitted, 0 packets received, 100.0% packet loss
+</code></pre>
+<p>由于无法访问域名，更无法下载脚本，脚本会一直处于<code>pending</code>状态，在非常长的等待时间（默认状态约1min）后变为<code>failed</code>状态。</p>
+<p>虽然GA提供的代码已经使用了script标签的async，使得脚本时异步执行的，下载脚本的过程不会阻塞HTML解析，但是由于下载迟迟没有完成，而下载的等待时间又远远长于页面加载时间，所以等待脚本下载失败的这个过程仍然会阻塞页面的最终渲染完成（包括部分图片和CSS渲染效果等），浏览器也会一直显示网页处于加载中，造成很差的用户体验。</p>
+<blockquote>
+<p>GA还提供了另一种直接将<code>analytics.js</code>添加到网站中的方式，但由于<code>www.google-analytics.com</code>无法访问，所以问题是一样的。</p>
+</blockquote>
+<h2 id="02-解决办法"><a href="#02-解决办法" class="headerlink" title="02. 解决办法"></a>02. 解决办法</h2><p>首先想到的解决方式是将<code>gtag.js</code>和<code>analytics.js</code>两段脚本存储到本地，这样就不需要从GA的服务器端获取脚本了。这种办法可以解决下载脚本造成pending的问题，但是由于<code>analytics.js</code>需要向<code>https://www.google-analytics.com</code>发送采集结果，这一步骤无法完成，仍然会造成阻塞。</p>
+<p>更彻底的解决方案是，在网页完全渲染完成之后，再开始下载和执行GA相关的脚本。我们可以将这一过程与网页渲染分隔开来，这样在用户看来，浏览器上呈现出的网页已经渲染完成了，渲染速度只取决于网页本身。至于GA的脚本加载成功与否，对用户的体验没有影响。</p>
+<p>基于上述思路，只要我们在网页元素<code>load</code>事件完成之后，再插入script标签并执行即可。插入的代码如下。经过试验，按照如下方式插入的GA脚本，能够正常进行统计。</p>
+<pre><code class="javascript">&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;!-- Modified By Ricardo (Tongtong) Liu --&gt;
+&lt;!-- &lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y&quot;&gt;&lt;/script&gt; --&gt;
+&lt;script&gt;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag(&#39;js&#39;, new Date());
+    gtag(&#39;config&#39;, &#39;UA-XXXXX-Y&#39;);
+
+    window.addEventListener(&#39;load&#39;, function(){
+        var s = document.createElement(&#39;script&#39;);
+        s.src = &quot;https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y&quot;;
+        document.body.appendChild(s);
+    });
+&lt;/script&gt;
+</code></pre>
+<blockquote>
+<p>当然从用户的角度来看，将<code>www.googletagmanager.com</code>和<code>www.google-analytics.com</code>添加到默认走代理的list中，是更普适的解决办法…</p>
+</blockquote>
+<h2 id="03-参考资料"><a href="#03-参考资料" class="headerlink" title="03. 参考资料"></a>03. 参考资料</h2><ul>
+<li><a href="https://harttle.land/2016/05/18/async-javascript-loading.html" target="_blank" rel="noopener">Web 性能优化：异步加载脚本</a></li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://tongtongliu.siyuan12.com/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://tongtongliu.siyuan12.com/Blog/2018/11/19/10.前端 | 墙内Google Analytics加载失败导致的阻塞问题/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sevenspace-liutt.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//sevenspace-liutt.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/Blog/2018/10/24/08.密码学 | Many-Time-Pad攻击/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -1186,6 +952,14 @@ It will not impact the appearance and can give developers a lot of support :)
                     
 
                     
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
@@ -1353,6 +1127,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","/Blog/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
 
 
@@ -1365,6 +1143,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
